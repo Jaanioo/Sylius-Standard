@@ -1,0 +1,17 @@
+<div class="ui bottom attached tab segment active" data-tab="details">
+    {{ sonata_block_render_event('sylius.shop.product.show.tab_details', {'product': product}) }}
+    <b>{{ 'sylius.ui.description'|trans }}</b>: <br>
+    {% if product.description is not empty %}
+        {{ product.description | nl2br }}
+    {% else %}
+        {{ 'sylius.ui.no_description'|trans }}.
+    {% endif %}
+
+    <hr>
+
+    {% if product.description is not empty %}
+        <b>Product color: </b> {{ product.color | trans }}
+    {% else %}
+        {{ 'sylius.product.no_color'|trans }}.
+    {% endif %}
+</div>

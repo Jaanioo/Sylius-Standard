@@ -1,0 +1,7 @@
+sylius:
+    product:
+        color:
+            no_color: None
+            blue: Blue
+            green: Green
+            red: Red
